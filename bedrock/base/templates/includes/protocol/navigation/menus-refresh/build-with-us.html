@@ -1,0 +1,70 @@
+{#
+  This Source Code Form is subject to the terms of the Mozilla Public
+  License, v. 2.0. If a copy of the MPL was not distributed with this
+  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ #}
+
+ <li class="c-menu-category mzp-has-drop-down mzp-js-expandable multi-column">
+   <a class="c-menu-title" href="{{ url('mozorg.about.index') }}" aria-haspopup="true" aria-controls="c-menu-panel-about" data-testid="navigation-link-build-with-us">{{ ftl('navigation-refresh-build-with-us') }}</a>
+   <div class="c-menu-panel" id="c-menu-panel-about" data-testid="navigation-menu-build-with-us">
+     <div class="c-menu-panel-container">
+       <button class="c-menu-button-close" type="button" aria-controls="c-menu-panel-about">{{ ftl('navigation-refresh-close-build-with-us-menu') }}</button>
+       <div class="c-menu-panel-content">
+         <ul class="mzp-l-content">
+           <li>
+            <p>{{ ftl('navigation-refresh-develop') }}</p>
+            <ul>
+              <li>
+                <section class="c-menu-item">
+                  <a class="c-menu-item-link" href="{{ url('mozorg.about.index') }}" data-link-text="Firefox developer edition" data-link-type="nav" data-link-position="topnav" data-link-group="build-with-us">
+                    <h4 class="c-menu-item-title">{{ ftl('navigation-refresh-firefox-developer-edition') }}</h4>
+                  </a>
+                </section>
+              </li>
+              <li>
+                <section class="c-menu-item">
+                  <a class="c-menu-item-link" href="{{ url('mozorg.about.leadership.index') }}" data-link-text="MDN Plus &amp; MDB Web Docs" data-link-type="nav" data-link-position="topnav" data-link-group="build-with-us">
+                    <h4 class="c-menu-item-title">{{ ftl('navigation-refresh-mdn-plus-and-mdb-web-docs') }}</h4>
+                  </a>
+                </section>
+              </li>
+              <li>
+                <section class="c-menu-item">
+                  <a class="c-menu-item-link" href="{{ url('mozorg.about.leadership.index') }}" data-link-text="Developer tools" data-link-type="nav" data-link-position="topnav" data-link-group="build-with-us">
+                    <h4 class="c-menu-item-title">{{ ftl('navigation-refresh-developer-tools') }}</h4>
+                  </a>
+                </section>
+              </li>
+              <li>
+                <section class="c-menu-item">
+                  <a class="c-menu-item-link" href="{{ url('mozorg.about.leadership.index') }}" data-link-text="Beta &amp; Nightly" data-link-type="nav" data-link-position="topnav" data-link-group="build-with-us">
+                    <h4 class="c-menu-item-title">{{ ftl('navigation-refresh-beta-and-nightly') }}</h4>
+                  </a>
+                </section>
+              </li>
+            </ul>
+           </li>
+           <li>
+            <p>{{ ftl('navigation-refresh-take-part') }}</p>
+            <ul>
+              <li>
+                <section class="c-menu-item">
+                  <a class="c-menu-item-link" href="{{ url('mozorg.about.manifesto') }}" data-link-text="Data Futures Lab" data-link-type="nav" data-link-position="topnav" data-link-group="build-with-us">
+                    <h4 class="c-menu-item-title">{{ ftl('navigation-refresh-data-futures-lab') }}</h4>
+                  </a>
+                </section>
+              </li>
+              <li>
+                <section class="c-menu-item">
+                  <a class="c-menu-item-link" href="{{ url('mozorg.about.manifesto') }}" data-link-text="Open source audit tooling project" data-link-type="nav" data-link-position="topnav" data-link-group="build-with-us">
+                    <h4 class="c-menu-item-title">{{ ftl('navigation-refresh-open-source-audit-tooling-project') }}</h4><sup>(OAT)</sup>
+                  </a>
+                </section>
+              </li>
+            </ul>
+           </li>
+         </ul>
+       </div>
+     </div><!-- close .c-menu-panel-container -->
+   </div><!-- close .c-menu-panel -->
+ </li><!-- close build with us -->

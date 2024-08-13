@@ -1,0 +1,563 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+@import '~@mozilla-protocol/core/protocol/css/includes/lib';
+
+$color-zilla-green: #00d230;
+$color-primary-gray: #181818;
+$moz24-font-size-md: 16px;
+
+.moz24-navigation-refresh {
+    .c-navigation-container {
+        @media(min-width: $screen-md) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .c-navigation-dark-mode-button {
+        display: none;
+    }
+
+    .c-navigation-logo {
+        padding-top: 4px;
+        margin: 0 32px 0 0;
+
+        @media (min-width: $screen-md) {
+            margin: 24px 32px 24px 0;
+        }
+
+        .c-navigation-logo-image {
+            height: 21px;
+        }
+    }
+
+    .c-menu-category > .c-menu-title {
+        position: relative;
+
+        @media(min-width: $screen-md) {
+            &::after {
+                display: block;
+                background: $color-white;
+                bottom: 7px;
+                content: "";
+                height: 1px;
+                left: 8px;
+                position: absolute;
+                width: calc(100% - 16px);
+            }
+        }
+
+        @media(min-width: $screen-lg) {
+            &::after {
+                bottom: 7px;
+                left: 16px;
+                width: calc(100% - 32px);
+            }
+        }
+    }
+
+    .c-menu-category-list {
+        padding: 24px 0;
+    }
+
+    // Common navigation styles
+    .c-navigation-l-content {
+        position: relative;
+    }
+
+    .c-navigation {
+        background-color: $color-black;
+        color: $color-white;
+    }
+
+    button.c-navigation-menu-button {
+        background-color: $color-white;
+        margin: 0;
+
+        @media (min-width: $screen-md) {
+            margin: 24px 0;
+        }
+    }
+
+    .c-menu-category.mzp-has-drop-down .c-menu-panel {
+        border-top: 4px solid $color-primary-gray;
+        background-color: $color-black;
+        color: $color-white;
+
+        @media (min-width: $screen-md) {
+            left: 0;
+            right: auto;
+            top: 80px;
+            width: 100%;
+            padding: 64px 32px;
+        }
+    }
+
+    .c-menu-panel .c-menu-panel-container {
+        max-width: unset;
+        background-color: $color-black;
+        color: $color-white;
+        box-shadow: none;
+
+        @media (min-width: $screen-md) {
+            border-radius: 0;
+        }
+    }
+
+    .c-menu.mzp-is-enhanced .c-menu-category {
+        position: unset;
+
+        &.mzp-is-selected {
+            .c-menu-title {
+                color: $color-zilla-green;
+
+                &::after {
+                    background: $color-zilla-green;
+                    height: 1px;
+                    bottom: 7px;
+                }
+            }
+        }
+    }
+
+    .c-menu-panel {
+        @media (min-width: $screen-md) {
+            padding: 0;
+        }
+    }
+
+    h4.c-menu-item-title {
+        color: $color-white;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .top-header-navigation .mzp-l-content {
+        @media (min-width: $screen-md) {
+            padding: 0;
+        }
+
+        p {
+            color: #757575;
+            font-weight: 600;
+            font-size: 12px;
+            margin-block-end: 8px;
+        }
+    }
+
+    .c-menu-item {
+        min-width: 216px;
+        width: auto;
+
+        .c-menu-item-link {
+            display: flex;
+            width: max-content;
+            position: relative;
+            padding: 8px 0;
+
+            h4.c-menu-item-title {
+                &::after {
+                    display: block;
+                    background: $color-white;
+                    bottom: 11px;
+                    content: "";
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .c-menu-item .c-menu-item-link
+    .c-menu-item .c-menu-item-link:link,
+    .c-menu-item .c-menu-item-link:visited {
+        color: $color-white;
+
+        h4.c-menu-item-title {
+            color: $color-white;
+
+            &::after {
+                display: block;
+                background: $color-white;
+                bottom: 11px;
+                content: "";
+                height: 1px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    }
+
+    .c-menu-item .c-menu-item-link:hover {
+        h4.c-menu-item-title {
+            color: $color-zilla-green;
+
+            &::after {
+                display: block;
+                background: $color-zilla-green;
+                bottom: 11px;
+                content: "";
+                height: 1px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+        }
+
+        svg path {
+            fill: $color-zilla-green;
+        }
+    }
+
+    .c-menu-item:hover,
+    .c-menu-item:focus,
+    .c-menu-item:active {
+        background-color: unset;
+    }
+
+    sup {
+        color: $color-zilla-green;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    // multi column menu design: about us, take action, build with us
+    .multi-column {
+        .c-menu-panel .c-menu-panel-content > ul.mzp-l-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @media (min-width: $screen-md) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    // specific to take action menu
+    .take-action.multi-column {
+        .c-menu-panel .c-menu-panel-content > ul.mzp-l-content {
+            @media (min-width: $screen-md) {
+                flex-direction: column;
+            }
+
+            @media (min-width: $screen-xl) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    // single column, has icon menu design: firefox browsers, product
+    .single-column {
+        .c-menu-panel .c-menu-panel-content > ul.mzp-l-content {
+            display: flex;
+            flex-direction: column;
+
+            & > li {
+                border-bottom: 4px solid $color-primary-gray;
+
+                .c-menu-item {
+                    border-bottom: transparent;
+                }
+            }
+        }
+
+        .c-menu-panel .c-menu-category-link {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .c-menu-panel .c-menu-category-link a,
+        .c-menu-panel .c-menu-category-link a:visited,
+        .c-menu-panel .c-menu-category-link a:link {
+            color: $color-white;
+            position: relative;
+            display: flex;
+            width: fit-content;
+
+            &::after {
+                display: block;
+                background: $color-white;
+                bottom: -2px;
+                content: "";
+                height: 1px;
+                left: 0;
+                position: absolute;
+                width: calc(100% - 24px);
+            }
+        }
+
+        .c-menu-panel .c-menu-category-link a:hover {
+            color: $color-zilla-green;
+
+            &::after {
+                display: block;
+                background: $color-zilla-green;
+                bottom: -2px;
+                content: "";
+                height: 1px;
+                left: 0;
+                position: absolute;
+                width: calc(100% - 24px);
+            }
+
+            svg path {
+                fill: $color-zilla-green;
+            }
+        }
+
+        .mzp-has-icon .c-menu-item-link {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+
+            @media(min-width: $screen-lg) {
+                padding-left: 24px;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .c-menu-item-title {
+                position: relative;
+
+                &::after {
+                    display: block;
+                    background: $color-white;
+                    bottom: 1px;
+                    content: "";
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+
+            p.c-menu-item-desc {
+                margin-top: 0;
+                font-weight: 400;
+                font-size: $moz24-font-size-md;
+                color: $color-white;
+
+                @media(min-width: $screen-lg) {
+                    margin-top: 0;
+                }
+            }
+
+            .c-menu-item-icon {
+                height: 16px;
+                width: 16px;
+                position: absolute;
+                top: 11px;
+                left: 24px;
+
+                @media(min-width: $screen-lg) {
+                    top: 20px;
+                    left: 4px;
+                }
+            }
+
+            @media(min-width: $screen-md) {
+                display: flex;
+            }
+        }
+
+        .c-menu-item .c-menu-item-link
+        .c-menu-item .c-menu-item-link:active,
+        .c-menu-item .c-menu-item-link:visited {
+            color: $color-white;
+
+            h4.c-menu-item-title {
+                color: $color-white;
+                font-weight: 600;
+                padding-left: 16px;
+
+                &::after {
+                    display: block;
+                    background: $color-white;
+                    bottom: 1px;
+                    content: "";
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+        }
+
+        .mzp-has-icon.c-menu-item .c-menu-item-link:hover {
+            background-color: $color-white;
+
+            h4.c-menu-item-title {
+                color: $color-black;
+                border-bottom-color: transparent;
+
+                &::after {
+                    background: $color-black;
+                    bottom: 1px;
+                }
+            }
+
+            p.c-menu-item-desc {
+                color: $color-black;
+            }
+        }
+
+    }
+
+    .c-menu.mzp-is-enhanced .c-menu-category.c-menu-category-has-icon {
+        .c-menu-title-icon {
+            margin-right: 8px;
+        }
+
+        .c-menu-title::after {
+            bottom: 7px;
+            left: 40px;
+            width: calc(100% - 56px);
+        }
+
+        .c-menu-item-link:hover .c-menu-title::after {
+            left: 40px;
+            width: calc(100% - 56px);
+        }
+    }
+
+    // dark mode styles
+    @media (prefers-color-scheme: dark) {
+        .c-menu-category .c-menu-title {
+            color: white;
+        }
+
+        .c-navigation-dark-mode-button {
+            display: none;
+
+            @media(min-width: $screen-lg) {
+                display: inline;
+                background-color: unset;
+                color: $color-white;
+                border: transparent;
+                font-size: $moz24-font-size-md;
+                line-height: 24px;
+                font-weight: 600;
+                position: relative;
+
+                &::after {
+                    display: block;
+                    background: $color-white;
+                    bottom: 4px;
+                    content: "";
+                    height: 1px;
+                    left: 6px;
+                    position: absolute;
+                    width: calc(100% - 12px);
+                }
+            }
+        }
+    }
+}
+
+// mobile specfic styles
+@media (max-width: $screen-md) {
+    .js .moz24-navigation-refresh {
+        // todo: fixed top bar and scroll bar
+        display: flex;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+
+        .c-navigation-l-content {
+            width: 100%;
+            display: flex;
+        }
+
+        .c-navigation-container {
+            width: 100%;
+            padding: 0 24px;
+        }
+
+        .c-navigation-items {
+            display: flex;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            overflow: auto hidden;
+            transition: 0.45s;
+            transform: translateX(100%);
+            margin-top: 64px;
+            padding-top: 0;
+            border-top: 2px solid gray;
+
+            &.mzp-is-open {
+                display: flex;
+                transform: translateX(0);
+            }
+        }
+
+        .c-navigation-menu {
+            width: 100%;
+        }
+
+        .c-menu-category-list {
+            padding: 0;
+            position: relative;
+        }
+
+        .c-menu-category {
+            padding: 8px 16px;
+
+            &.mzp-is-selected {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                min-width: 100%;
+                background-color: $color-white;
+                padding: 8px 0;
+
+                .c-menu-title {
+                    padding: 8px 16px;
+
+                    &::before {
+                        right: 24px;
+                    }
+                }
+
+                .c-menu-panel {
+                    transform: translateX(0);
+                }
+            }
+
+            .c-menu-panel {
+                display: block;
+                position: fixed;
+                z-index: 100;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #fff;
+                overflow: auto hidden;
+                transition: 0.45s;
+                margin-top: 65px;
+                transform: translateX(100%);
+            }
+        }
+    }
+}
+
+#outer-wrapper {
+    margin-top: 65px;
+}
