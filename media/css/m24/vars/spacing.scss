@@ -2,6 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+// tokens
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1312px;
+
+// media query
+$mq-md: '(min-width: $screen-md)';
+$mq-lg: '(min-width: $screen-lg)';
+$mq-xl: '(min-width: $screen-xl)';
+
 :root {
     // spacers
     --spacer-3xl: 80px;

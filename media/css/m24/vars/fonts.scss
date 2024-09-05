@@ -1,0 +1,30 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+@font-face {
+    font-family: "Mozilla Sans Normal BETA05";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: local('Mozilla Sans Beta Regular');
+}
+
+@font-face {
+    font-family: "Mozilla Sans Normal BETA05";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: local('Mozilla Sans Beta SemiBold');
+}
+
+@font-face {
+    font-family: "Mozilla Semi-Slab Normal BETA05";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: local('Mozilla Sans Beta SemiBold');
+}
+
+$primary-font: "Mozilla Sans Normal BETA05", inter, x-localespecific, sans-serif;
+$secondary-font: "Mozilla Semi-Slab Normal BETA05", "Zilla Slab", inter, x-localespecific;

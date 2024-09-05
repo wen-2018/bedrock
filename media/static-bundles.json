@@ -251,7 +251,7 @@
     },
     {
       "files": [
-        "css/base/navigation-refresh.scss"
+        "css/m24/components/navigation-refresh.scss"
       ],
       "name": "navigation-refresh"
     },

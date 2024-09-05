@@ -10,6 +10,9 @@
 
 {% block site_css %}
   {{ css_bundle('protocol-mozilla') }}
+  {% if switch('m24-navigation') %}
+    {{ css_bundle('navigation-refresh') }}
+  {% endif %}
 {% endblock %}
 
 {% block site_footer %}

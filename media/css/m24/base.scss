@@ -10,6 +10,10 @@
 @import 'vars/spacing';
 @import 'vars/text';
 @import 'vars/animation';
+@import 'vars/fonts';
+
+// Global components
+@import 'components/navigation-refresh';
 
 $mobile-square-img-max-width: 363px;
 
