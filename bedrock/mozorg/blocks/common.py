@@ -512,7 +512,7 @@ class ShowcaseGalleryImageBlock(blocks.StructBlock):
 
     class Meta:
         icon = "image"
-        label = "Gallery Image"
+        label = "Showcase Gallery Image"
         label_format = "{image}"
 
 
